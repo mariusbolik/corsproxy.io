@@ -1,0 +1,251 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  --primary-color: #5469d4;
+  --primary-color-shade: #445bd0;
+  --primary-color-rgb: 60, 66, 87;
+  --dark-color: #000;
+  --light-color: #fff;
+}
+
+.site-content {
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: 900px;
+  margin: 6% auto 0 auto;
+  min-height: calc(100% - 160px);
+}
+
+body {
+  background-image: url("../assets/img/bg.jpg");
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+h1 {
+  font-size: 2.6em;
+  text-align: center;
+  line-height: 1.2;
+  margin: 0 auto 40px auto;
+  width: 500px;
+}
+
+p {
+  color: #64748b;
+}
+
+.primary {
+  color: var(--primary-color);
+}
+
+.example > h3 {
+  position: relative;
+  color: var(--primary-color);
+  font-size: 18px;
+  border-bottom: solid 2px var(--primary-color);
+  margin: 0;
+  width: 100%;
+  max-width: 390px;
+}
+
+.example > h3 > input {
+  width: 100%;
+  max-width: 210px;
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--primary-color);
+  padding-left: 1px;
+  border: none;
+  background-color: transparent;
+}
+
+.example > h3 > input::placeholder {
+  color: var(--primary-color);
+  opacity: 0.4;
+}
+
+.example > h3 > input:focus {
+  outline: none;
+}
+
+.card {
+  background-color: white;
+  box-shadow: 0 0 20px rgba(var(--primary-color-rgb), 0.1);
+  border-radius: 12px;
+  padding: 20px 30px;
+}
+
+.card-main {
+  height: auto;
+  padding: 40px 60px 30px 60px;
+}
+
+@media only screen and (max-width: 45em) {
+  .card-main {
+    padding: 40px 40px 30px 40px;
+  }
+}
+
+.card-main > h3 {
+  margin: 0;
+}
+
+.feature-card {
+  text-align: center;
+}
+
+.feature-card > p {
+  font-weight: bold;
+  color: var(--dark-color);
+  margin: 0;
+}
+
+.feature-card > svg {
+  width: 60px;
+}
+
+.button {
+  position: absolute;
+  cursor: pointer;
+  right: -28px;
+  bottom: -2px;
+}
+
+.button:hover {
+  opacity: 0.8;
+}
+
+.banner {
+  background-color: var(--primary-color);
+  color: var(--light-color);
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* Ribbon */
+
+.ribbon {
+  transform: scale(0.8);
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  position: absolute;
+}
+
+.ribbon::before,
+.ribbon::after {
+  position: absolute;
+  z-index: -1;
+  content: "";
+  display: block;
+  border: 5px solid var(--primary-color-shade);
+}
+
+.ribbon span {
+  position: absolute;
+  display: block;
+  width: 225px;
+  padding: 15px 0;
+  background-color: var(--primary-color);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  color: #fff;
+  font: 700 18px/1 "Lato", sans-serif;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.ribbon-top-right {
+  top: -15px;
+  right: -14px;
+}
+
+.ribbon-top-right::before,
+.ribbon-top-right::after {
+  border-top-color: transparent;
+  border-right-color: transparent;
+}
+
+.ribbon-top-right::before {
+  top: 0;
+  left: 0;
+}
+
+.ribbon-top-right::after {
+  bottom: 0;
+  right: 0;
+}
+
+.ribbon-top-right span {
+  left: -25px;
+  top: 30px;
+  transform: rotate(45deg);
+}
+
+code {
+  font-family: monospace;
+  background: #f9f9f9;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid lightgray;
+  margin: 0 auto;
+}
+
+.error-message {
+  color: red;
+  margin: 0;
+  font-size: 12px;
+  opacity: 0;
+}
+
+/* Grid */
+
+.row [class^="col"] {
+  margin: 0.5rem 1%;
+}
+
+@media only screen and (min-width: 45em) {
+  .col-3 {
+    width: 23%;
+  }
+}
+
+@media only screen and (min-width: 45em) {
+  .col-12 {
+    width: 98%;
+  }
+}
+
+.footer {
+  clear: both;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  padding: 20px 0;
+}
+
+.footer > p,
+.footer a,
+.footer span {
+  font-size: 14px;
+  color: grey !important;
+}
+
+.code-example {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.code-example > .example-title {
+  font-weight: 600;
+  color: var(--primary-color);
+  text-align: center;
+}
+
+/* .row [class^=col]:first-of-type {
+  margin-left: 0;
+}
+.row [class^=col]:last-of-type {
+  margin-right: 0;
+} */
