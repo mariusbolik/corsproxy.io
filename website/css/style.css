@@ -17,7 +17,7 @@ body {
 }
 
 body {
-  background-image: url("../assets/img/bg.jpg");
+  background-image: url("https://cdn.statically.io/gh/eyloo/corsproxy.io/main/website/assets/img/bg.jpg");
   background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;
