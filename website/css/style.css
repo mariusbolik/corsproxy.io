@@ -7,13 +7,21 @@ body {
   --light-color: #fff;
 }
 
-.site-content {
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 6%;
+  width: 100%;
+  height: 100%;
+}
+
+.page-content {
   position: relative;
   display: block;
   width: 100%;
-  max-width: 900px;
-  margin: 6% auto 0 auto;
-  min-height: calc(100% - 160px);
 }
 
 body {
@@ -23,13 +31,24 @@ body {
   background-repeat: no-repeat;
 }
 
-h1 {
-  font-size: 2.6em;
+
+
+h1.title {
+  font-size: 2.6rem;
   text-align: center;
   line-height: 1.2;
   margin: 0 auto 40px auto;
-  width: 500px;
+  width: auto;
+  max-width: 500px;
 }
+
+@media (max-width: 445px) {
+  h1.title {
+    font-size: 1.9rem !important;
+  }
+}
+
+
 
 p {
   color: #64748b;
@@ -77,12 +96,12 @@ p {
 }
 
 .card-main {
+  position: relative;
   height: auto;
   padding: 40px 60px 30px 60px;
-}
+  margin: 0 9px;
 
-@media only screen and (max-width: 45em) {
-  .card-main {
+  @media only screen and (max-width: 45em) {
     padding: 40px 40px 30px 40px;
   }
 }
@@ -92,6 +111,7 @@ p {
 }
 
 .feature-card {
+  width: auto;
   text-align: center;
 }
 
@@ -157,8 +177,8 @@ p {
 }
 
 .ribbon-top-right {
-  top: -15px;
-  right: -14px;
+  top: -23px;
+  right: -23px;
 }
 
 .ribbon-top-right::before,
@@ -190,6 +210,7 @@ code {
   border-radius: 6px;
   border: 1px solid lightgray;
   margin: 0 auto;
+  line-height: 40px;
 }
 
 .error-message {
@@ -206,6 +227,7 @@ code {
 }
 
 @media only screen and (min-width: 45em) {
+  
   .col-3 {
     width: 23%;
   }
@@ -218,7 +240,6 @@ code {
 }
 
 .footer {
-  clear: both;
   position: relative;
   text-align: center;
   width: 100%;
@@ -230,6 +251,7 @@ code {
 .footer span {
   font-size: 14px;
   color: grey !important;
+  margin: 0;
 }
 
 .code-example {
